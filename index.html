@@ -16,7 +16,9 @@
 
         <div class="container" id="app">
             <h1>Vue Email List</h1>
-            <ol class="email-list">
+            <!-- SE la lunghezza dell'array mails è uguale a 10... -->
+            <ol class="email-list" v-if="mails.length == 10">
+                <!-- ...stampane gli elementi -->
                 <li  v-for="singleMail in mails">{{singleMail}}</li>
             </ol>
         </div>
